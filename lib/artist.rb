@@ -25,7 +25,6 @@ def self.find_or_create_by_name(name)
  # (my_artist = self.all.find {|artist| artist.name == name}) ? my_artist : self.new(name)
  self.all.find {|artist| artist.name == name || self.new(name)}
  end  
-end
 
  def print_songs
    self.songs.each do |song|
